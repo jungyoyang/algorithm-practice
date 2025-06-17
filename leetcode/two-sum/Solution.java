@@ -9,6 +9,6 @@ class Solution {
                 }
             }
         }
-        return new int[] {-1, -1}; // 예외 처리 (실제 문제에선 발생하지 않음)
+        return new int[] {-1, -1}; // 예외 처리
     }
 }
