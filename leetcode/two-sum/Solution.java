@@ -17,4 +17,4 @@ for (int i = 0; i < nums.length; i++) {
     map.put(x, i); // 현재 숫자와 인덱스를 저장
 }
 
-return 
+return new int{-1,-1};
