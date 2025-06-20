@@ -1,14 +1,20 @@
-// ✅ 수정된 정답 풀이 (브루트포스 방식)
+// ✅ 정답 풀이 (hashmap 방식)
 
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target && i != j) {
-                    return new int[] {i, j};
-                }
-            }
-        }
-        return new int[] {-1, -1}; // 예외 처리
+int[] nums = {2, 7, 11, 15};
+int target = 9;
+
+Map<Integer, Integer> map = new HashMap<>();
+
+for (int i = 0; i < nums.length; i++) {
+    int x = nums[i];
+    int y = target - x;
+
+    if (map.containsKey(y)) {
+        // y가 이미 map에 있다면, 그 인덱스와 i를 리턴
+        return new int[] {map.get(y), i};
     }
+
+    map.put(x, i); // 현재 숫자와 인덱스를 저장
 }
+
+return 
