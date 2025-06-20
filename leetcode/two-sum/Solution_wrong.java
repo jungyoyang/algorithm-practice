@@ -1,12 +1,13 @@
 import java.util.HashMap;
 import java.util.Map; // 인터페이스
 
-Map<i, j> hash = new HashMap<>();
+Map<int, int> hash = new HashMap<>();
 int i;
 int j;
 int target;
-i + j = target
-map.put("apple", "사과");
+target = i + j;
+map.put(i, j);
+
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
