@@ -15,6 +15,7 @@
  */
 class Solution {
     public boolean isBalanced(TreeNode root) {
+<<<<<<< HEAD
         return checkHeight(root) != -1;
     }
 
@@ -33,3 +34,20 @@ class Solution {
         return 1 + Math.max(leftHeight, rightHeight); // 현재 노드의 높이 리턴
     }
 }
+=======
+            if (root == null) return true;
+
+            int left = getDepth(root.left);
+            int right = getDepth(root.right);
+
+            if (Math.abs(left - right) > 1) return false;
+
+            return isBalanced(root.left) && isBalanced(root.right);
+        }
+
+    private int getDepth(TreeNode node) {
+            if (node == null) return 0;
+            return Math.max(getDepth(node.left), getDepth(node.right)) + 1;
+        }
+}
+>>>>>>> 33501d0b6a6ce8483430f7ac78d0486c26e3aa70
